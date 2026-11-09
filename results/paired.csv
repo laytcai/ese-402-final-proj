@@ -1,0 +1,9 @@
+a,b,diff_mean,diff_sd_over_repeats,ci_low,ci_high
+random ridge,random least squares,-0.0002,0.0001,-0.0017,0.0013
+random knn,random ridge,-6.8930,0.0714,-7.2655,-6.5518
+grouped ridge,grouped least squares,0.0000,0.0000,-0.0000,0.0000
+grouped knn,grouped ridge,-6.4562,0.0897,-6.8608,-6.0735
+grouped mean,random mean,0.0119,0.0099,0.0061,0.0184
+grouped least squares,random least squares,0.1205,0.0254,0.0774,0.1794
+grouped ridge,random ridge,0.1207,0.0254,0.0779,0.1798
+grouped knn,random knn,0.5575,0.1561,0.3792,0.7349

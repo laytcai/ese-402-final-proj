@@ -1,0 +1,9 @@
+scheme,model,setting,at_grid_edge,rmse_mean,rmse_sd_over_repeats,ci_low,ci_high,rmse_repeated_rows,setting_per_repeat
+random,mean,,False,34.4005,0.0017,33.7552,35.0882,34.9278,"[nan, nan, nan, nan, nan]"
+random,least squares,,False,17.7534,0.0136,17.4126,18.0852,16.9229,"[nan, nan, nan, nan, nan]"
+random,ridge,0.0562,False,17.7532,0.0137,17.4125,18.0854,16.9245,"[0.0562, 0.1, 0.1, 0.0562, 0.0562]"
+random,knn,3.0000,False,10.8602,0.0732,10.5249,11.2124,9.2868,"[2.0, 3.0, 3.0, 2.0, 3.0]"
+grouped,mean,,False,34.4123,0.0093,33.7696,35.1038,34.9542,"[nan, nan, nan, nan, nan]"
+grouped,least squares,,False,17.8739,0.0205,17.5307,18.2134,17.2213,"[nan, nan, nan, nan, nan]"
+grouped,ridge,0.0010,True,17.8739,0.0205,17.5307,18.2134,17.2213,"[0.001, 0.001, 0.0316, 0.001, 0.01]"
+grouped,knn,3.0000,False,11.4176,0.0987,11.0426,11.7975,10.8172,"[3.0, 3.0, 2.0, 3.0, 3.0]"
