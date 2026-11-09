@@ -1,7 +1,6 @@
 # Key figure: RMSE per model under random and grouped CV, and the paired gap between them.
 # Run after baseline.py.
 
-import json
 from pathlib import Path
 
 import matplotlib
@@ -18,7 +17,6 @@ SURFACE, INK, SOFT_INK, GRID, AXIS = "#fcfcfb", "#0b0b0b", "#52514e", "#e1e0d9",
 
 summary = pd.read_csv(OUT / "summary.csv").set_index(["scheme", "model"])
 paired = pd.read_csv(OUT / "paired.csv").set_index(["a", "b"])
-facts = json.loads((OUT / "facts.json").read_text())
 positions = np.arange(len(MODELS))
 
 plt.rcParams.update(
@@ -80,13 +78,5 @@ right.set_ylim(-0.1, 0.85)
 right.set_ylabel("Grouped minus random RMSE (K)")
 right.set_title("Extra error under grouped folds", loc="left", fontsize=11)
 
-fig.text(
-    0.01,
-    0.015,
-    f"{facts['dev_rows']:,} rows; the sealed 20% test set is not used. Values are means over five fold assignments.\n"
-    "Whiskers are 95% bootstrap intervals, resampling materials.",
-    fontsize=8,
-    color=SOFT_INK,
-)
-fig.tight_layout(rect=(0, 0.08, 1, 1))
+fig.tight_layout()
 fig.savefig(OUT / "baseline.png", facecolor=SURFACE)
